@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+    <!-- THE ADDITION -->
+<!--  <link rel="stylesheet" type="text/css" href="https://rawgit.com/nolimits4web/Framework7/master/dist/css/framework7.material.css">
+    <script src="https://rawgit.com/nolimits4web/Framework7/master/dist/js/framework7.js"></script>-->
+
+
+    <!-- ENDS -->
+
+
+
+  </head>
+  <body ng-app="starter" ng-controller="ContentController">
+
+<!--
+<ion-nav-bar  class="bar-positive" title="我的页面" align-title="center">
+
+  <ion-nav-back-button class="button-clear">
+    <i class="icon ion-chevron-left"></i> 返回
+
+  </ion-nav-back-button>
+
+<ion-nav-view>
+</ion-nav-view>
+-->
+
+
+<ion-side-menus>
+  <ion-side-menu-content>
+
+
+    <ion-nav-bar  class="bar-positive" title="我的页面" align-title="center">
+
+
+            <ion-nav-back-button class="button-clear" >
+              <i class="icon ion-chevron-left"></i> 返回
+            </ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+</ion-nav-bar>
+      <ion-nav-view name="tabs-all">
+      </ion-nav-view>
+
+
+  </ion-side-menu-content>
+
+
+  <ion-side-menu side="left">
+    <ion-header-bar align-title="center" class="bar-dark">
+      <h1 class="title">侧边栏</h1>
+
+    </ion-header-bar>
+
+<!--    <ion-content name="tabs-all">
+
+ &lt;!&ndash;     <ion-nav-view hr >
+
+
+      </ion-nav-view>&ndash;&gt;
+&lt;!&ndash;
+      <div ui-sref="slidemenu">
+
+
+      </div>&ndash;&gt;
+
+
+    </ion-content>-->
+   <!-- <ion-nav-view ></ion-nav-view>-->
+
+ <!--   <ion-view >
+      <ion-content class="padding">
+        <h2 >Welcome to IonicMenu4444</h2>
+        <p>
+          This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="#" onclick="ClickObj.Testevent();" >Ionic Market</a>.
+        </p>
+        <p>
+          To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
+        </p>
+        <p>
+          If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
+        </p>
+        <p>
+          For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
+        </p>
+      </ion-content>
+    </ion-view>-->
+    <div ng-include="'tabs/sidemenu.html'"></div>
+</ion-side-menus>
+
+  </body>
+</html>
